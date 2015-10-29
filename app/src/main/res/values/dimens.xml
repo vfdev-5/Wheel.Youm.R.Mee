@@ -6,6 +6,7 @@
 
     <dimen name="view_vertical_size">300dp</dimen>
     <dimen name="header_vertical_size">50dp</dimen>
+    <color name="header">#fff</color>
 
 
     <dimen name="yes_btn_horizontal_size">100dp</dimen>
@@ -18,11 +19,14 @@
     <dimen name="btn_vertical_size">30dp</dimen>
 
 
+
     <color name="login_header">#B4eeeeee</color>
     <color name="login_panel">#B4050505</color>
     <color name="login_custom">#B4020202</color>
     <color name="login_txt">#fff</color>
+    <color name="login_txt_hint">#aaa</color>
     <color name="login_submit">#1166bb</color>
+    <color name="login_spinner">#aaa</color>
 
 
     <color name="question_yes_btn">#1166bb</color>

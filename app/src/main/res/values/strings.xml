@@ -1,12 +1,20 @@
 <resources>
 
+    <string name="app_name">Wheel.Youm.R.Mee</string>
+
+    <!--Question-->
+
+    <string name="confirm_no">Это, действительно, твой ответ?</string>
+
+    <string name="yes_dialog_title">Ура ! Туту + Кошка = &#10084;</string>
+
+
+    <string name="no_dialog_title">Ну, и коза!</string>
+
+
     <!--Video-->
-    <string name="app_name">Дорогая, моя Алёна !</string>
 
 
-
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
 
 
 

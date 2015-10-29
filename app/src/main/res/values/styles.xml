@@ -1,16 +1,10 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="android:fontFamily">serif-light</item>
+        <!--<item name="android:fontFamily">serif-light</item>-->
 
     </style>
-
-    <style name="NoTitleActivity" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="android:fontFamily">serif-light</item>
-    </style>
-
 
 </resources>

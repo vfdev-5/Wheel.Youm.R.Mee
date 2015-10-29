@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,10 +20,8 @@ public class LoginActivity extends AppCompatActivity
 {
 
     // UI
-    @Bind(R.id.greeting)
-    TextView greeting;
     @Bind(R.id.submit)
-    Button submit;
+    ImageButton submit;
     @Bind(R.id.answers)
     Spinner answers;
     @Bind(R.id.day)
@@ -30,15 +29,14 @@ public class LoginActivity extends AppCompatActivity
     @Bind(R.id.month)
     EditText month;
 
+    Animations animations = new Animations();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-
-//        Typeface font = Typeface.createFromAsset(getAssets(), "DroidSans.ttf");
-//        greetingTV.setTypeface(font);
 
         SharedPreferences pref = getSharedPreferences("WYRM", 0);
         if (!pref.getBoolean("is_new_user", true)) {
@@ -59,6 +57,8 @@ public class LoginActivity extends AppCompatActivity
 
     @OnClick(R.id.submit)
     public void sumbit(){
+
+        submit.startAnimation(animations.getButtonAnimation());
         int d, m;
         try {
             d = Integer.parseInt(day.getText().toString());

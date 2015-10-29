@@ -30,7 +30,7 @@
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         tools:ignore="ContentDescription"
-        android:scaleType="center" />
+        android:scaleType="fitCenter" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -40,79 +40,103 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="@drawable/layout_bg"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:theme="@style/Base.Theme.AppCompat">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/text"
             android:gravity="center|top"
-            android:layout_margin="10dp"
             android:src="@drawable/login_text"
             tools:ignore="ContentDescription"
-            android:scaleType="center"/>
+            android:scaleType="fitCenter"
+            android:padding="10dp" />
 
-        <TextView
+
+        <!--<TextView-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/login_q1"-->
+            <!--android:id="@+id/q1"-->
+            <!--android:background="@color/login_custom"-->
+            <!--android:textColor="@color/login_txt"-->
+            <!--android:padding="10dp" />-->
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:id="@+id/imageView"
+            android:src="@android:color/white"
+            tools:ignore="ContentDescription"/>
+
+        <ImageView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/login_q1"
             android:id="@+id/q1"
             android:background="@color/login_custom"
-            android:textColor="@color/login_txt"
-            android:padding="10dp" />
+            android:src="@drawable/login_q1"
+            android:scaleType="fitStart"
+            tools:ignore="ContentDescription"
+            android:layout_margin="1dp" />
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:text="@string/login_q1_day"
-                android:id="@+id/day_label"
-                android:textColor="@color/login_txt"
-                android:layout_weight="2"
-                android:gravity="center" />
+            android:gravity="center_horizontal">
 
             <EditText
-                android:layout_width="fill_parent"
+                android:layout_width="@dimen/btn_horizontal_size"
                 android:layout_height="fill_parent"
                 android:inputType="numberSigned"
                 android:ems="10"
                 android:textColor="@color/login_txt"
+                android:textColorHint="@color/login_txt_hint"
                 android:id="@+id/day"
-                android:layout_weight="2"/>
+                android:hint="@string/login_q1_day" />
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:text="@string/login_q1_month"
-                android:id="@+id/month_label"
-                android:textColor="@color/login_txt"
-                android:layout_weight="2"
-                android:gravity="center" />
+            <Space
+                android:layout_width="@dimen/btn_horizontal_size"
+                android:layout_height="match_parent" />
 
             <EditText
-                android:layout_width="fill_parent"
+                android:layout_width="@dimen/btn_horizontal_size"
                 android:layout_height="fill_parent"
                 android:inputType="numberSigned"
                 android:ems="10"
+                android:hint="@string/login_q1_month"
+                android:textColorHint="@color/login_txt_hint"
                 android:textColor="@color/login_txt"
-                android:id="@+id/month"
-                android:layout_weight="2" />
+                android:id="@+id/month" />
         </LinearLayout>
 
+        <!--<TextView-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/login_q2"-->
+            <!--android:id="@+id/q2"-->
+            <!--android:background="@color/login_custom"-->
+            <!--android:textColor="@color/login_txt"-->
+            <!--android:padding="10dp" />-->
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:id="@+id/imageView2"
+            android:src="@android:color/white"
+            tools:ignore="ContentDescription"/>
 
-        <TextView
+        <ImageView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/login_q2"
             android:id="@+id/q2"
             android:background="@color/login_custom"
-            android:textColor="@color/login_txt"
-            android:padding="10dp" />
+            android:src="@drawable/login_q2"
+            android:scaleType="fitStart"
+            tools:ignore="ContentDescription"
+            android:layout_margin="1dp" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -122,6 +146,13 @@
             android:gravity="center"
             android:padding="10dp" />
 
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:id="@+id/imageView3"
+            android:layout_gravity="center_horizontal"
+            android:src="@android:color/white" />
+
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -130,7 +161,7 @@
             android:src="@drawable/login_submit"
             android:layout_gravity="center_horizontal"
             android:layout_margin="10dp"
-            android:scaleType="center"
+            android:scaleType="fitCenter"
             android:padding="10dp" />
 
 

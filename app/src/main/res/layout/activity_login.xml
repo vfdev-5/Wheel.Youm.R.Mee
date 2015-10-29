@@ -1,34 +1,36 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
     tools:context="com.vfdev.wheelyoumrmee.LoginActivity">
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:src="@drawable/verification"
-        android:scaleType="centerCrop"
+        android:scaleType="center"
         tools:ignore="ContentDescription"
         android:layout_alignParentBottom="false"
         android:layout_alignParentRight="false"
         android:layout_alignParentEnd="false" />
 
-    <TextView
+    <ImageView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/login_greeting"
         android:id="@+id/greeting"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="@color/login_bg"
-        android:textColor="@color/login_txt"
-        android:textStyle="bold"
+        android:background="@color/login_header"
+        android:src="@drawable/login_greetings"
         android:gravity="center"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        tools:ignore="ContentDescription"
+        android:scaleType="center" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -40,23 +42,22 @@
         android:background="@drawable/layout_bg"
         android:layout_marginTop="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/login_text"
             android:id="@+id/text"
-            android:textColor="@color/login_txt"
             android:gravity="center|top"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:src="@drawable/login_text"
+            tools:ignore="ContentDescription"
+            android:scaleType="center"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/login_q1"
             android:id="@+id/q1"
-            android:background="@color/login_bg2"
+            android:background="@color/login_custom"
             android:textColor="@color/login_txt"
             android:padding="10dp" />
 
@@ -105,12 +106,11 @@
 
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/login_q2"
             android:id="@+id/q2"
-            android:background="@color/login_bg2"
+            android:background="@color/login_custom"
             android:textColor="@color/login_txt"
             android:padding="10dp" />
 
@@ -122,12 +122,16 @@
             android:gravity="center"
             android:padding="10dp" />
 
-        <Button
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/login_submit"
             android:id="@+id/submit"
-            android:layout_gravity="center_horizontal" />
+            android:background="@drawable/submit_button"
+            android:src="@drawable/login_submit"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:scaleType="center"
+            android:padding="10dp" />
 
 
     </LinearLayout>

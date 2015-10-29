@@ -4,8 +4,28 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
 
-    <color name="login_bg">#B4aaaaaa</color>
-    <color name="login_bg2">#B4dddddd</color>
-    <color name="login_txt">#000</color>
+    <dimen name="view_vertical_size">300dp</dimen>
+    <dimen name="header_vertical_size">50dp</dimen>
+
+
+    <dimen name="yes_btn_horizontal_size">100dp</dimen>
+    <dimen name="yes_btn_vertical_size">40dp</dimen>
+
+    <dimen name="no_btn_horizontal_size">70dp</dimen>
+    <dimen name="no_btn_vertical_size">30dp</dimen>
+
+    <dimen name="btn_horizontal_size">70dp</dimen>
+    <dimen name="btn_vertical_size">30dp</dimen>
+
+
+    <color name="login_header">#B4eeeeee</color>
+    <color name="login_panel">#B4050505</color>
+    <color name="login_custom">#B4020202</color>
+    <color name="login_txt">#fff</color>
+    <color name="login_submit">#1166bb</color>
+
+
+    <color name="question_yes_btn">#1166bb</color>
+    <color name="question_no_btn">#777</color>
 
 </resources>

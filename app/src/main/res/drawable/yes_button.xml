@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size
+        android:width="@dimen/yes_btn_horizontal_size"
+        android:height="@dimen/yes_btn_vertical_size" />
+    <solid android:color="@color/question_yes_btn"/>
+    <stroke android:width="1dip"
+        android:color="#111" />
+    <corners android:radius="10dip"/>
+</shape>

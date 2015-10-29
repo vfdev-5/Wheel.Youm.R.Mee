@@ -4,21 +4,13 @@
 
     <!--Question-->
 
+    <string name="question_hint">Листай картинки справа налево</string>
     <string name="confirm_no">Это, действительно, твой ответ?</string>
-
     <string name="yes_dialog_title">Ура ! Туту + Кошка = &#10084;</string>
-
-
     <string name="no_dialog_title">Ну, и коза!</string>
-
+    <string name="title_activity_question"></string>
 
     <!--Video-->
-
-
-
-
-
-    <string name="title_activity_question">А теперь </string>
 
 
     <!--LOGIN-->
@@ -43,7 +35,7 @@
 
     <string name="login_submit">Проверить&#8230;</string>
 
-
+    <string name="login_no_answer">Приложение больше недействительно!</string>
 
 
 

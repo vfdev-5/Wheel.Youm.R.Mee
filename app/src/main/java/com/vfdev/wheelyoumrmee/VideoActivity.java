@@ -3,6 +3,8 @@ package com.vfdev.wheelyoumrmee;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageButton;
@@ -17,28 +19,47 @@ public class VideoActivity extends AppCompatActivity {
     // Ui
     @Bind(R.id.video)
     VideoView videoView;
+    @Bind(R.id.videoControl)
+    ImageButton videoControl;
+
     @Bind(R.id.next)
     ImageButton next;
     Animations animations = new Animations();
 
-    private ProgressDialog progress;
-//    private MediaController controller;
 
-
+    private Drawable mPlayButtonDrawable;
+    private Drawable mPauseButtonDrawable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_video);
         ButterKnife.bind(this);
-//        controller = new MediaController(this);
+
+        mPlayButtonDrawable = getResources().getDrawable(android.R.drawable.ic_media_play);
+        mPauseButtonDrawable = getResources().getDrawable(android.R.drawable.ic_media_pause);
+
+        try {
+            Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.test);
+            videoView.setVideoURI(uri);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
 
+    @Override
+    protected void onResume(){
+        videoControl.setImageDrawable(mPlayButtonDrawable);
+        super.onResume();
+        playVideo();
+    }
 
-        // setup UI
-//        SharedPreferences pref = getSharedPreferences("WYRM", 0);
-//        next.setEnabled(pref.getBoolean("video_has_seen", false));
-
+    @Override
+    protected void onPause(){
+        videoView.stopPlayback();
+        super.onPause();
     }
 
 
@@ -50,20 +71,25 @@ public class VideoActivity extends AppCompatActivity {
     }
 
 
-    private void videoHasSeen() {
-        if (!next.isEnabled()) {
-//            writePreferences();
-            next.setEnabled(true);
+    @OnClick(R.id.videoControl)
+    public void control() {
+
+        if (videoView.isPlaying()) {
+            pauseVideo();
+        } else {
+            playVideo();
         }
     }
 
-    private void writePreferences() {
-        SharedPreferences pref = getSharedPreferences("WYRM", 0);
-        SharedPreferences.Editor editor = pref.edit();
-        editor.putBoolean("video_has_seen", true);
-        editor.apply();
+
+    private void playVideo() {
+        videoControl.setImageDrawable(mPauseButtonDrawable);
+        videoView.start();
     }
 
-
+    private void pauseVideo() {
+        videoControl.setImageDrawable(mPlayButtonDrawable);
+        videoView.pause();
+    }
 
 }

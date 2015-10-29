@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bg"
+        android:src="@drawable/flowers_bg"
+        android:scaleType="center"
+        tools:ignore="ContentDescription"/>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/header_vertical_size"
+            android:id="@+id/header"
+            android:src="@drawable/video_header"
+            android:background="@drawable/layout_header"
+            tools:ignore="ContentDescription"
+            android:scaleType="fitCenter"
+            android:padding="5dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1" />
+
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/video"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:layout_weight="2" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/videoControl"
+                android:src="@android:drawable/ic_media_play" />
+
+            <Space
+                android:layout_width="@dimen/btn_horizontal_size"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/next"
+                android:background="@drawable/yes_button"
+                android:src="@drawable/video_next"
+                tools:ignore="ContentDescription"
+                android:scaleType="fitStart"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

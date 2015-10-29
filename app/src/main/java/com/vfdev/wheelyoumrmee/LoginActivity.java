@@ -40,7 +40,16 @@ public class LoginActivity extends AppCompatActivity
 
         SharedPreferences pref = getSharedPreferences("WYRM", 0);
         if (!pref.getBoolean("is_new_user", true)) {
-            goToNextActivity();
+
+            if (pref.getInt("answer", -1) == QuestionActivity.NO) {
+                Toast.makeText(this,
+                        getString(R.string.login_no_answer),
+                        Toast.LENGTH_LONG
+                        ).show();
+                finish();
+            } else {
+                goToNextActivity();
+            }
         }
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
@@ -71,7 +80,7 @@ public class LoginActivity extends AppCompatActivity
 
         if (d == m && m == a && a*d*m == 64) {
             // OK
-//            writePreferences();
+            writePreferences();
             goToNextActivity();
             return;
         }

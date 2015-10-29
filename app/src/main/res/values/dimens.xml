@@ -28,7 +28,7 @@
     <color name="login_submit">#1166bb</color>
     <color name="login_spinner">#aaa</color>
 
-
+    <color name="question_pager">#77aaaaaa</color>
     <color name="question_yes_btn">#1166bb</color>
     <color name="question_no_btn">#777</color>
 

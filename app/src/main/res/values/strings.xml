@@ -1,0 +1,44 @@
+<resources>
+
+    <!--Video-->
+    <string name="app_name">Дорогая, моя Алёна !</string>
+
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+
+    <string name="title_activity_question">А теперь </string>
+
+
+    <!--LOGIN-->
+    <string name="login_greeting">Приветствую тебя, мой новый пользователь!</string>
+
+    <string name="login_text">Чтобы войти в приложение тебе нужно ответить на несколько вопросов :</string>
+
+    <string name="login_q1">Какая дата получится, если вычесть наши дни рождения (из моего - твой) ?</string>
+    <string name="login_q1_day">День :</string>
+    <string name="login_q1_month">Месяц :</string>
+
+    <string name="login_q2">Какая фраза является строчкой из песенки ?</string>
+
+    <string-array name="login_q2_vars">
+        <item>Les hippos sont gros</item>
+        <item>Les hippos sont tous des animaux</item>
+        <item>Et les chèvres sont aussi les animaux</item>
+        <item>Et les chèvres sont bons aussi</item>
+    </string-array>
+
+    <string name="login_failed">К сожалению, это неправильные ответы. Попробуй снова!</string>
+
+    <string name="login_submit">Проверить&#8230;</string>
+
+
+
+
+
+
+
+</resources>

@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -39,8 +40,15 @@ public class VideoActivity extends AppCompatActivity {
         mPlayButtonDrawable = getResources().getDrawable(android.R.drawable.ic_media_play);
         mPauseButtonDrawable = getResources().getDrawable(android.R.drawable.ic_media_pause);
 
+        videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                videoControl.setImageDrawable(mPlayButtonDrawable);
+            }
+        });
+
         try {
-            Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.test);
+            Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.film);
             videoView.setVideoURI(uri);
         } catch (Exception e) {
             e.printStackTrace();

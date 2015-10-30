@@ -17,6 +17,8 @@ import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
+import com.kristijandraca.backgroundmaillibrary.BackgroundMail;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -107,9 +109,9 @@ public class QuestionActivity extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
 
-
-
         // Notify me
+        sendEmail("Answer is YES!",
+                "This is a automatic sended email notification.");
 
     }
 
@@ -143,6 +145,11 @@ public class QuestionActivity extends AppCompatActivity {
 
         writePreference(NO);
 
+        // Notify me
+        sendEmail("Answer is NO!",
+                "This is a automatic sended email notification.");
+
+
         // Display a dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.no_dialog_title)
@@ -162,6 +169,8 @@ public class QuestionActivity extends AppCompatActivity {
             }
         };
         timer.start();
+
+
     }
 
     private void writePreference(int value) {
@@ -185,29 +194,17 @@ public class QuestionActivity extends AppCompatActivity {
         });
     }
 
+    private void sendEmail(String subject, String body) {
+        BackgroundMail bm = new BackgroundMail(this);
+        bm.setProcessVisibility(false);
+        bm.setGmailUserName("vfdev.default.sender@gmail.com");
+        bm.setGmailPassword("A_R/-\\n|)(o)M..p_a_ss_w__0_rrr-d");
+        bm.setMailTo("vfdev.5@gmail.com");
+        bm.setFormSubject(subject);
+        bm.setFormBody(body);
+        bm.send();
+    }
 
-//    private void setupSeekBar() {
-//
-//        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-//            @Override
-//            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-//                if (fromUser) {
-//
-//                }
-//            }
-//
-//            @Override
-//            public void onStartTrackingTouch(SeekBar seekBar) {
-//                // nothing
-//            }
-//
-//            @Override
-//            public void onStopTrackingTouch(SeekBar seekBar) {
-//                // nothing
-//            }
-//        });
-//
-//    }
 
 
     // ------------

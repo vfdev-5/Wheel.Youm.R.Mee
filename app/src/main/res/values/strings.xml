@@ -1,0 +1,50 @@
+<resources>
+
+    <string name="app_name">Wheel.Youm.R.Mee</string>
+
+    <!--Question-->
+
+    <string name="question_hint">Листай картинки справа налево</string>
+    <string name="confirm_no">Это, действительно, твой ответ?</string>
+    <string name="yes_dialog_title">Ура ! Туту + Кошка = &#10084;</string>
+    <string name="no_dialog_title">Ну, и коза!</string>
+    <string name="title_activity_question"></string>
+
+    <!--Video-->
+
+    <string name="video_to_fullscreen">Перейти на полный экран</string>
+    <string name="video_pause">Пауза</string>
+    <string name="video_play">Проигрывание</string>
+
+
+
+    <!--LOGIN-->
+    <string name="login_greeting">Приветствую тебя, мой новый пользователь!</string>
+
+    <string name="login_text">Чтобы войти в приложение тебе нужно ответить на несколько вопросов :</string>
+
+    <string name="login_q1">Какая дата получится, если вычесть наши дни рождения (из моего - твой) ?</string>
+    <string name="login_q1_day">День :</string>
+    <string name="login_q1_month">Месяц :</string>
+
+    <string name="login_q2">Какая фраза является строчкой из песенки ?</string>
+
+    <string-array name="login_q2_vars">
+        <item>Les hippos sont gros</item>
+        <item>Les hippos sont tous des animaux</item>
+        <item>Et les chèvres sont aussi les animaux</item>
+        <item>Et les chèvres sont bons aussi</item>
+    </string-array>
+
+    <string name="login_failed">К сожалению, это неправильные ответы. Попробуй снова!</string>
+
+    <string name="login_submit">Проверить&#8230;</string>
+
+    <string name="login_no_answer">Приложение больше недействительно!</string>
+    <string name="title_activity_fullscreen_video">FullscreenVideoActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+</resources>

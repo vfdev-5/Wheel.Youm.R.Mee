@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context="com.vfdev.wheelyoumrmee.LoginActivity">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/verification"
+        android:scaleType="center"
+        tools:ignore="ContentDescription"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="false" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/greeting"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/login_header"
+        android:src="@drawable/login_greetings"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        tools:ignore="ContentDescription"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/greeting"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/layout_bg"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:theme="@style/Base.Theme.AppCompat">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:gravity="center|top"
+            android:src="@drawable/login_text"
+            tools:ignore="ContentDescription"
+            android:scaleType="fitCenter"
+            android:padding="10dp" />
+
+
+        <!--<TextView-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/login_q1"-->
+            <!--android:id="@+id/q1"-->
+            <!--android:background="@color/login_custom"-->
+            <!--android:textColor="@color/login_txt"-->
+            <!--android:padding="10dp" />-->
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:id="@+id/imageView"
+            android:src="@android:color/white"
+            tools:ignore="ContentDescription"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/q1"
+            android:background="@color/login_custom"
+            android:src="@drawable/login_q1"
+            android:scaleType="fitStart"
+            tools:ignore="ContentDescription"
+            android:layout_margin="1dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <EditText
+                android:layout_width="@dimen/btn_horizontal_size"
+                android:layout_height="fill_parent"
+                android:inputType="numberSigned"
+                android:ems="10"
+                android:textColor="@color/login_txt"
+                android:textColorHint="@color/login_txt_hint"
+                android:id="@+id/day"
+                android:hint="@string/login_q1_day" />
+
+            <Space
+                android:layout_width="@dimen/btn_horizontal_size"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:layout_width="@dimen/btn_horizontal_size"
+                android:layout_height="fill_parent"
+                android:inputType="numberSigned"
+                android:ems="10"
+                android:hint="@string/login_q1_month"
+                android:textColorHint="@color/login_txt_hint"
+                android:textColor="@color/login_txt"
+                android:id="@+id/month" />
+        </LinearLayout>
+
+        <!--<TextView-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/login_q2"-->
+            <!--android:id="@+id/q2"-->
+            <!--android:background="@color/login_custom"-->
+            <!--android:textColor="@color/login_txt"-->
+            <!--android:padding="10dp" />-->
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:id="@+id/imageView2"
+            android:src="@android:color/white"
+            tools:ignore="ContentDescription"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/q2"
+            android:background="@color/login_custom"
+            android:src="@drawable/login_q2"
+            android:scaleType="fitStart"
+            tools:ignore="ContentDescription"
+            android:layout_margin="1dp" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/answers"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:padding="10dp" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:id="@+id/imageView3"
+            android:layout_gravity="center_horizontal"
+            android:src="@android:color/white" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/submit"
+            android:background="@drawable/submit_button"
+            android:src="@drawable/login_submit"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:scaleType="fitCenter"
+            android:padding="10dp" />
+
+
+    </LinearLayout>
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Next"-->
+        <!--android:id="@+id/button"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="76dp"-->
+        <!--android:onClick="onBtnClick"/>-->
+
+
+</RelativeLayout>

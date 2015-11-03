@@ -12,6 +12,12 @@
 
     <!--Video-->
 
+    <string name="video_to_fullscreen">Перейти на полный экран</string>
+    <string name="video_pause">Пауза</string>
+    <string name="video_play">Проигрывание</string>
+
+    <string name="title_activity_fullscreen_video">FullscreenVideoActivity</string>
+
 
     <!--LOGIN-->
     <string name="login_greeting">Приветствую тебя, мой новый пользователь!</string>
@@ -37,8 +43,8 @@
 
     <string name="login_no_answer">Приложение больше недействительно!</string>
 
-
-
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 
 </resources>

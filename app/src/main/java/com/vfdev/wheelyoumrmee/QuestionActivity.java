@@ -48,11 +48,19 @@ public class QuestionActivity extends AppCompatActivity {
     ImagePagerAdapter adapter;
 
     Integer [] images = {
-            R.drawable.test_i0,
-            R.drawable.test_i1,
-            R.drawable.test_i2,
-            R.drawable.test_i3,
-            R.drawable.test_i4,
+            R.drawable.img_i0_0,
+            R.drawable.img_i0_1,
+            R.drawable.img_i1_0,
+            R.drawable.img_i1_1,
+            R.drawable.img_i2_0,
+            R.drawable.img_i2_2,
+            R.drawable.img_i2_3,
+            R.drawable.img_i3_1,
+            R.drawable.img_i3_2,
+            R.drawable.img_i3_3,
+            R.drawable.img_i4_0,
+            R.drawable.img_i4_1,
+            R.drawable.img_i4_2
     };
 
 
@@ -72,24 +80,9 @@ public class QuestionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_question);
         ButterKnife.bind(this);
 
+        progress.setMax(images.length-1);
 
-        // setup ui
-        SharedPreferences pref = getSharedPreferences("WYRM", 0);
-        switch (pref.getInt("answer", -1)) {
-            case YES:
-                answerIsYes.setVisibility(View.VISIBLE);
-                question.setVisibility(View.GONE);
-                break;
-            case NO:
-                answerIsYes.setVisibility(View.GONE);
-                question.setVisibility(View.GONE);
-                break;
-            case -1:
-            default:
-                answerIsYes.setVisibility(View.GONE);
-                question.setVisibility(View.VISIBLE);
-        }
-
+        setupUi();
 
         setupPager();
 
@@ -101,6 +94,8 @@ public class QuestionActivity extends AppCompatActivity {
         yes.startAnimation(animations.getButtonAnimation());
 
         writePreference(YES);
+
+        setupUi();
 
         // Display a dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -145,6 +140,8 @@ public class QuestionActivity extends AppCompatActivity {
 
         writePreference(NO);
 
+        setupUi();
+
         // Notify me
         sendEmail("Answer is NO!",
                 "This is a automatic sended email notification.");
@@ -180,6 +177,24 @@ public class QuestionActivity extends AppCompatActivity {
         editor.apply();
     }
 
+
+    private void setupUi() {
+        SharedPreferences pref = getSharedPreferences("WYRM", 0);
+        switch (pref.getInt("answer", -1)) {
+            case YES:
+                answerIsYes.setVisibility(View.VISIBLE);
+                question.setVisibility(View.GONE);
+                break;
+            case NO:
+                answerIsYes.setVisibility(View.GONE);
+                question.setVisibility(View.GONE);
+                break;
+            case -1:
+            default:
+                answerIsYes.setVisibility(View.GONE);
+                question.setVisibility(View.VISIBLE);
+        }
+    }
 
 
     private void setupPager() {

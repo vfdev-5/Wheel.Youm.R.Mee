@@ -3,6 +3,8 @@ package com.vfdev.wheelyoumrmee;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.util.Log;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.MediaController;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -18,8 +20,6 @@ public class FullscreenVideoActivity extends AppCompatActivity {
     @Bind(R.id.fs_video)
     VideoView videoView;
 
-//    private int mVideoPosition = -1;
-
     MediaController mController;
 
 
@@ -28,6 +28,7 @@ public class FullscreenVideoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fullscreen_video);
         ButterKnife.bind(this);
+
 
         mController = new MediaController(this, false);
         videoView.setMediaController(mController);
